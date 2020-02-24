@@ -1,0 +1,42 @@
+.notes-div {
+    position: relative;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.note-mat-card {
+    width: 104%;
+    
+    margin: -24px -33px -24px -33px;
+} 
+input,textarea:focus,select:focus {
+  outline: none;
+} 
+textarea{
+    width: 100%;
+  border:none;
+}
+.title-text {
+  border:none;
+ width: 100%;
+ font-size: 20px;
+font: bold;
+ }
+ .note-toolbar {
+   width: 60%;
+ }
+ .dailogbox-toolbar {
+   position: relative;
+   bottom: -10%;
+   display: flex;
+ }
+ .closebutton {
+   margin-left: auto;
+ }
+
+ .pin_image {
+  width: 20px;
+  height: 20px;
+}

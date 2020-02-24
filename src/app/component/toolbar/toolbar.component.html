@@ -1,0 +1,62 @@
+<div class="maindiv">
+    <div class="toolicon">
+    
+        <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
+            <img id="keep-icon1" mat-card-image src="/assets/icons/notifications_paused-24px.svg" />
+        </button>
+    </div>
+
+    <div class="toolicon">
+        <button mat-icon-button (click)="openDialog()">
+            <img id="keep-icon1" mat-card-image src="/assets/icons/person_add-24px.svg" />
+        </button>
+    </div>
+
+    <div class="toolicon">
+        <!-- (click)="changeColor()" -->
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <img id="keep-icon1" mat-card-image src="/assets/icons/color_lens-24px.svg" />
+        </button>
+        <mat-menu  #menu="matMenu" yPosition="above">
+            <div *ngFor="let rowcolors of colors" fxLayout="row">
+                <div   *ngFor="let colorEach of rowcolors">
+                    <!-- <div mat-menu-item> -->
+                        <button mat-mini-fab fxLayout="row"  [ngStyle]="{'background-color':colorEach.value}"
+                            (click)="changeColor(colorEach.value, note)" class="color-menu"></button>
+                    <!-- </div> --> 
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+
+    <div class="toolicon">
+        <button class="menuicon" mat-icon-button [matMenuTriggerFor]="menu1"
+            aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu1="matMenu">
+            <button mat-menu-item (click)="addToTrash(note.id)">
+                <span>Delete note</span>
+            </button>
+            <button mat-menu-item>
+                <span>Add drawing</span>
+            </button>
+
+            <button mat-menu-item>
+                <span>Make a copy</span>
+            </button>
+
+            <button mat-menu-item>
+                <span>Copy to Google Docs</span>
+            </button>
+            <!-- <div>
+                    <mat-menu #beforeMenu="matMenu">
+                       
+                          
+                                    
+                            </div> -->
+                    </mat-menu>
+    
+                </div>
+   </div>
+   

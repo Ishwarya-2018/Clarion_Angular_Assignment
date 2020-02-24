@@ -1,0 +1,119 @@
+.main-div{
+  width: 100%;
+  display: flex;
+
+}
+.left-div{
+  width: 45%;
+}
+.right-div{
+  width: 45%;
+  margin-left: 30px;
+}
+
+.notes-div {
+    margin-left: 8%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.mat-raised-button{
+  width: auto;
+  height: 60px;
+}
+.note-mat-card {
+    height: auto;
+    margin: 10px;
+} 
+.note-mat-card1{
+  height: auto;
+  margin: 10px;
+  width: 600px;
+} 
+.mat-grid {
+  width: 235px;
+}
+.mat-list {
+  width: 500px;
+  
+}
+.note-mat-card:hover{
+  .note-toolbar{
+    visibility: visible;
+    height: auto;
+    width: 600px;
+  }
+}
+input:focus,select:focus {
+  outline: none;
+} 
+textarea {
+  width: 100%;
+  border:none;
+}
+
+.title-text {
+ border:none;
+ width: 100%;
+ font-size: 20px;
+font: bold;
+}
+.note-toolbar {
+  position: absolute;
+   bottom: -10%;
+  width:100%;
+}
+
+.pin_image {
+  width: 20px;
+  height: 20px;
+}
+
+.search-div {
+  margin-left: 3%; 
+}
+
+.form-control {
+width: 90%;
+height: 25px;
+border: none;
+font-size: 16px;
+margin-top: -5px; 
+}
+
+.search-button,#search-button {
+margin-top: -11px;
+}
+
+input:focus,select:focus {
+outline: none;
+}  
+
+.mat-raised-button{
+  width: auto;
+  margin-right: auto;
+}
+.search-bar {
+display: flex;
+flex-direction: row;
+width: 35vw;
+height: 15px;
+border-radius: 5px;  
+margin-left: 40px;
+}
+
+.user-details{
+  margin-top: 30px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}

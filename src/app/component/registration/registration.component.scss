@@ -1,0 +1,42 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px; 
+  width: 350px;
+  height: auto;
+}
+.container {
+  display: flex;
+  justify-content: center;
+    width: 100%;
+  }
+  form{
+    width: 100%;
+    text-align: center;
+    }
+    .link-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width:90%;
+      margin-left: 20px;
+    }
+    mat-form-field {
+      width: 75%;
+    }
+    .link{
+      margin: 8px 0px 0px 7px;
+    }
+  .button {
+    margin-left: 43%;
+  }
+  a{
+    font-size: 1em;
+    text-decoration: none;
+  }
+  h2{
+    color:	#0000ff;
+  }
+  
+
+

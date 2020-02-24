@@ -1,0 +1,82 @@
+<div class="main-div"> 
+        <div class="left-div">
+        <div>
+                <header>
+                        <form [formGroup]="userForm">
+                                <mat-toolbar>
+                                        <div class="search-div">
+                                                <mat-card class="search-bar">
+                                                        <button id="search-button" mat-icon-button (click)="getNotesForUser()">
+                                                                <mat-icon matSuffix>search</mat-icon>
+                                                        </button>
+                                                        <input class="form-control" type="text" name="search" autocomplete="off"
+                                                                placeholder="search notes by user email" formControlName="email">
+                                                        <button class="search-button" mat-icon-button>
+                                                                <mat-icon matSuffix>clear</mat-icon>
+                                                        </button>
+                                                </mat-card>
+                                        </div>
+                                </mat-toolbar>
+                            </form>
+                        </header>
+                </div>
+
+                <div class="notes-div" fxLayout = {{direction}} *ngFor="let note of notes">
+                        <mat-card class="note-mat-card" 
+                                [ngStyle]="{'background-color':note.color}">
+                                <div (click)="openDialog(note)" class="notes">
+                                        <div fxLayout="row">
+                                        <input class="title-text" type="text" [(ngModel)]="note.noteTitle"
+                                                [ngStyle]="{'background-color':note.color}" />      
+                                        </div>       
+                                        <textarea (click)="openDialog(note)" [(ngModel)]="note.description"
+                                                cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                                                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="auto"
+                                                [ngStyle]="{'background-color':note.color}"></textarea>
+                                </div>           
+                        </mat-card>
+                </div>
+        </div>
+        
+        <div>
+                <button mat-raised-button color="primary" (click)="getAllUsers()" >Show All Users</button>
+                </div>
+        <div class="right-div">
+                <!-- <div>
+                <button mat-raised-button color="primary" (click)="getAllUsers()" >Show All Users</button>
+                </div> -->
+                <div class= "user-details">
+
+                        <table>
+                                <tr>
+                                        <th>User Id</th>
+                                        <th>Name</th>
+                                        <th>Mobile Number</th>
+                                        <th>Email</th>
+                                        <th>Registred Date</th>
+                                </tr>
+                                <tr *ngFor="let user of users">
+                                        <td>{{user.id}}</td>
+                                        <td>{{user.firstName}}</td>
+                                                <td>{{user.mobileNumber}}</td>
+                                                        <td>{{user.email}}</td>
+                                                        <td>{{user.createTime}}</td>
+                                </tr>
+                        </table>
+                                <!-- <mat-card >
+                                  <div class="notes-div" *ngFor="let user of users">
+                                     <mat-card class="note-mat-card1">
+                                        <p>User Id :       {{user.id}}</p>
+                                        <p>Name :          {{user.firstName}}</p>
+                                        <p>Email :         {{user.email}}</p>
+                                        <p>Mobile Number : {{user.mobileNumber}}</p>
+                                        <p>Email :         {{user.email}}</p>
+                                        <p>Registred Date :{{user.createTime}}</p>
+                                     </mat-card>
+
+                                  </div> 
+                                </mat-card> -->
+                </div>
+        </div>
+        
+</div>

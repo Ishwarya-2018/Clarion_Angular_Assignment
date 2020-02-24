@@ -1,0 +1,37 @@
+.maindiv{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-left: -20px;;
+}
+
+.toolicon{
+    padding: 1%;
+}
+
+.menuicon {
+    border: none;
+    outline: none;
+    margin-top: -8px;
+}
+
+#keep-icon1 {
+    margin-top: 0px;
+    opacity: 0.6;
+    width: 50%;
+    height: 50%;
+}
+.reminder-button {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.span2 {
+    margin-left: auto;
+}
+.color-menu {
+    margin: 5px;
+}
+.matLevel{
+    margin-top:10px;
+}
